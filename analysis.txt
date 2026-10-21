@@ -1,0 +1,116 @@
+
+== Frontend: вакансий, с зарплатой в рублях, медиана
+count_star() | count(salary) | round(median(salary))
+6051 | 2384 | 140000.0
+
+== Пары, которые сильнее всего повышают медиану (n >= 30, база - более частый навык пары)
+pair | n | pair_median | base | base_median | added | uplift
+Frontend + ReactJS | 31 | 200000.0 | Frontend | 140000.0 | ReactJS | 60000.0
+Git + PostgreSQL | 34 | 180000.0 | Git | 125000.0 | PostgreSQL | 55000.0
+Angular + CSS | 43 | 150000.0 | CSS | 105000.0 | Angular | 45000.0
+React.js + TypeScript | 73 | 200000.0 | TypeScript | 155000.0 | React.js | 45000.0
+Angular + JavaScript | 90 | 173750.0 | JavaScript | 130000.0 | Angular | 43750.0
+Docker + HTML5 | 30 | 160000.0 | HTML5 | 120000.0 | Docker | 40000.0
+ReactJS + TypeScript | 56 | 192500.0 | TypeScript | 155000.0 | ReactJS | 37500.0
+Docker + JavaScript | 64 | 166250.0 | JavaScript | 130000.0 | Docker | 36250.0
+Angular + TypeScript | 96 | 190000.0 | TypeScript | 155000.0 | Angular | 35000.0
+Docker + Git | 55 | 160000.0 | Git | 125000.0 | Docker | 35000.0
+
+== Тройки, которые сильнее всего повышают медиану (n >= 20, база - самая частая пара тройки)
+triple | n | triple_median | base | base_median | added | uplift
+Frontend + JavaScript + React.js | 26 | 240000.0 | Frontend + JavaScript | 135000.0 | React.js | 105000.0
+Frontend + React + React.js | 23 | 250000.0 | Frontend + React | 150000.0 | React.js | 100000.0
+Frontend + React + ReactJS | 23 | 250000.0 | Frontend + React | 150000.0 | ReactJS | 100000.0
+Frontend + React.js + TypeScript | 21 | 250000.0 | Frontend + TypeScript | 150000.0 | React.js | 100000.0
+Frontend + ReactJS + TypeScript | 21 | 250000.0 | Frontend + TypeScript | 150000.0 | ReactJS | 100000.0
+React + React.js + TypeScript | 29 | 250000.0 | React + TypeScript | 150000.0 | React.js | 100000.0
+Angular + CSS + JavaScript | 33 | 180000.0 | CSS + JavaScript | 105000.0 | Angular | 75000.0
+Git + JSON API + JavaScript | 23 | 190000.0 | Git + JavaScript | 120000.0 | JSON API | 70000.0
+Git + JavaScript + PostgreSQL | 30 | 190000.0 | Git + JavaScript | 120000.0 | PostgreSQL | 70000.0
+Angular + CSS + TypeScript | 21 | 205000.0 | CSS + TypeScript | 137500.0 | Angular | 67500.0
+
+== Пары, которые сильнее всего понижают медиану (n >= 30, база - более частый навык пары)
+pair | n | pair_median | base | base_median | added | uplift
+Figma + React | 37 | 85000.0 | React | 150000.0 | Figma | -65000.0
+React + Кроссбраузерная верстка | 42 | 90000.0 | React | 150000.0 | Кроссбраузерная верстка | -60000.0
+Ajax + JavaScript | 57 | 75000.0 | JavaScript | 130000.0 | Ajax | -55000.0
+JavaScript + PHP | 91 | 80000.0 | JavaScript | 130000.0 | PHP | -50000.0
+JavaScript + jQuery | 119 | 80000.0 | JavaScript | 130000.0 | jQuery | -50000.0
+JavaScript + Веб-программирование | 39 | 80000.0 | JavaScript | 130000.0 | Веб-программирование | -50000.0
+React + Адаптивная верстка | 43 | 100000.0 | React | 150000.0 | Адаптивная верстка | -50000.0
+Ajax + Git | 44 | 80000.0 | Git | 125000.0 | Ajax | -45000.0
+CSS3 + PHP | 52 | 75000.0 | CSS3 | 120000.0 | PHP | -45000.0
+HTML5 + PHP | 42 | 77500.0 | HTML5 | 120000.0 | PHP | -42500.0
+
+== Тройки, которые сильнее всего понижают медиану (n >= 20, база - самая частая пара тройки)
+triple | n | triple_median | base | base_median | added | uplift
+JavaScript + PHP + React | 24 | 75000.0 | JavaScript + React | 145000.0 | PHP | -70000.0
+Git + React + jQuery | 21 | 80000.0 | Git + React | 140000.0 | jQuery | -60000.0
+JavaScript + React + jQuery | 25 | 85000.0 | JavaScript + React | 145000.0 | jQuery | -60000.0
+JavaScript + React + Кроссбраузерная верстка | 32 | 87500.0 | JavaScript + React | 145000.0 | Кроссбраузерная верстка | -57500.0
+Figma + Git + React | 27 | 85000.0 | Git + React | 140000.0 | Figma | -55000.0
+Git + React + Кроссбраузерная верстка | 27 | 85000.0 | Git + React | 140000.0 | Кроссбраузерная верстка | -55000.0
+JavaScript + React + Адаптивная верстка | 32 | 90000.0 | JavaScript + React | 145000.0 | Адаптивная верстка | -55000.0
+CSS3 + React + Кроссбраузерная верстка | 23 | 80000.0 | CSS3 + React | 130000.0 | Кроссбраузерная верстка | -50000.0
+Git + JS + React | 33 | 90000.0 | Git + React | 140000.0 | JS | -50000.0
+CSS3 + HTML5 + Веб-программирование | 20 | 67500.0 | CSS3 + HTML5 | 115000.0 | Веб-программирование | -47500.0
+
+== Регионы: вакансии и зарплаты
+area | vacancies | share_pct | with_salary | median | q25 | q75 | remote_pct
+Москва | 2765 | 45.7 | 842 | 180000.0 | 125000.0 | 230000.0 | 39.7
+Санкт-Петербург | 932 | 15.4 | 405 | 150000.0 | 100000.0 | 200000.0 | 30.4
+Екатеринбург | 244 | 4.0 | 134 | 115000.0 | 80000.0 | 175000.0 | 28.7
+
+== Москва: топ навыков, пар и троек
+k | combo | c | share_pct | median
+1 | JavaScript | 1328 | 48.0 | 180000.0
+1 | TypeScript | 1077 | 39.0 | 200000.0
+1 | React | 906 | 32.8 | 190000.0
+1 | Git | 613 | 22.2 | 160000.0
+1 | HTML | 472 | 17.1 | 150000.0
+2 | JavaScript + TypeScript | 730 | 26.4 | 200000.0
+2 | JavaScript + React | 633 | 22.9 | 200000.0
+2 | React + TypeScript | 602 | 21.8 | 200000.0
+2 | Git + JavaScript | 456 | 16.5 | 160000.0
+2 | HTML + JavaScript | 367 | 13.3 | 150000.0
+3 | JavaScript + React + TypeScript | 418 | 15.1 | 200000.0
+3 | JavaScript + React + Redux | 240 | 8.7 | 200000.0
+3 | Git + JavaScript + TypeScript | 226 | 8.2 | 180000.0
+3 | React + Redux + TypeScript | 224 | 8.1 | 200000.0
+3 | Git + JavaScript + React | 214 | 7.7 | 150000.0
+
+== Санкт-Петербург: топ навыков, пар и троек
+k | combo | c | share_pct | median
+1 | JavaScript | 483 | 51.8 | 140000.0
+1 | TypeScript | 343 | 36.8 | 160000.0
+1 | React | 287 | 30.8 | 150000.0
+1 | Git | 257 | 27.6 | 140000.0
+1 | HTML | 175 | 18.8 | 120000.0
+2 | JavaScript + TypeScript | 237 | 25.4 | 150000.0
+2 | JavaScript + React | 201 | 21.6 | 147500.0
+2 | Git + JavaScript | 199 | 21.4 | 140000.0
+2 | React + TypeScript | 183 | 19.6 | 160000.0
+2 | HTML + JavaScript | 142 | 15.2 | 125000.0
+3 | JavaScript + React + TypeScript | 127 | 13.6 | 150000.0
+3 | CSS3 + HTML5 + JavaScript | 90 | 9.7 | 111550.0
+3 | Git + JavaScript + TypeScript | 89 | 9.5 | 150000.0
+3 | CSS + HTML + JavaScript | 85 | 9.1 | 100000.0
+3 | Git + JavaScript + React | 83 | 8.9 | 145000.0
+
+== Екатеринбург: топ навыков, пар и троек
+k | combo | c | share_pct | median
+1 | JavaScript | 150 | 61.5 | 120000.0
+1 | TypeScript | 99 | 40.6 | 135000.0
+1 | HTML | 90 | 36.9 | 105000.0
+1 | CSS | 81 | 33.2 | 115000.0
+1 | React | 79 | 32.4 | 115000.0
+2 | JavaScript + TypeScript | 78 | 32.0 | 140000.0
+2 | HTML + JavaScript | 76 | 31.1 | 105000.0
+2 | CSS + JavaScript | 69 | 28.3 | 115000.0
+2 | CSS + HTML | 68 | 27.9 | 105000.0
+2 | Git + JavaScript | 61 | 25.0 | 115000.0
+3 | CSS + HTML + JavaScript | 58 | 23.8 | 105000.0
+3 | CSS + HTML + TypeScript | 40 | 16.4 | 115000.0
+3 | CSS + JavaScript + TypeScript | 40 | 16.4 | 125000.0
+3 | HTML + JavaScript + TypeScript | 40 | 16.4 | 115000.0
+3 | JavaScript + React + TypeScript | 36 | 14.8 | 125000.0

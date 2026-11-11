@@ -1,0 +1,37 @@
+openjdk version "17.0.16" 2025-07-15
+OpenJDK Runtime Environment Homebrew (build 17.0.16+0)
+OpenJDK 64-Bit Server VM Homebrew (build 17.0.16+0, mixed mode, sharing)
+JAVA_HOME=/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home
+== zk1/conf/zoo.cfg, myid=1
+tickTime=2000
+initLimit=10
+syncLimit=5
+dataDir=/Users/mir/PyCharmProjects/ITMO/Sem_5/EngD_VK/hw4/zk1/data
+clientPort=2181
+admin.serverPort=8081
+4lw.commands.whitelist=srvr,stat,ruok,mntr
+server.1=127.0.0.1:2888:3888
+server.2=127.0.0.1:2889:3889
+server.3=127.0.0.1:2890:3890
+== zk2/conf/zoo.cfg, myid=2
+tickTime=2000
+initLimit=10
+syncLimit=5
+dataDir=/Users/mir/PyCharmProjects/ITMO/Sem_5/EngD_VK/hw4/zk2/data
+clientPort=2182
+admin.serverPort=8082
+4lw.commands.whitelist=srvr,stat,ruok,mntr
+server.1=127.0.0.1:2888:3888
+server.2=127.0.0.1:2889:3889
+server.3=127.0.0.1:2890:3890
+== zk3/conf/zoo.cfg, myid=3
+tickTime=2000
+initLimit=10
+syncLimit=5
+dataDir=/Users/mir/PyCharmProjects/ITMO/Sem_5/EngD_VK/hw4/zk3/data
+clientPort=2183
+admin.serverPort=8083
+4lw.commands.whitelist=srvr,stat,ruok,mntr
+server.1=127.0.0.1:2888:3888
+server.2=127.0.0.1:2889:3889
+server.3=127.0.0.1:2890:3890

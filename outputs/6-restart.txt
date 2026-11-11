@@ -1,0 +1,9 @@
+ZooKeeper JMX enabled by default
+Using config: /Users/mir/PyCharmProjects/ITMO/Sem_5/EngD_VK/hw4/zk2/bin/../conf/zoo.cfg
+Starting zookeeper ... STARTED
+ZooKeeper JMX enabled by default
+Using config: /Users/mir/PyCharmProjects/ITMO/Sem_5/EngD_VK/hw4/zk1/bin/../conf/zoo.cfg
+Starting zookeeper ... STARTED
+zk1: Mode: follower
+zk2: Mode: follower
+zk3: Mode: leader

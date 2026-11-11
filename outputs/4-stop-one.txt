@@ -1,0 +1,7 @@
+останавливаю лидера zk2
+ZooKeeper JMX enabled by default
+Using config: /Users/mir/PyCharmProjects/ITMO/Sem_5/EngD_VK/hw4/zk2/bin/../conf/zoo.cfg
+Stopping zookeeper ... STOPPED
+zk1: Mode: follower
+zk2: Error contacting service. It is probably not running.
+zk3: Mode: leader

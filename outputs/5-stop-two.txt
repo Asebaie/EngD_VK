@@ -1,0 +1,10 @@
+останавливаю второй сервер zk1
+ZooKeeper JMX enabled by default
+Using config: /Users/mir/PyCharmProjects/ITMO/Sem_5/EngD_VK/hw4/zk1/bin/../conf/zoo.cfg
+Stopping zookeeper ... STOPPED
+zk1: Error contacting service. It is probably not running.
+zk2: Error contacting service. It is probably not running.
+zk3: Error contacting service. It is probably not running.
+zk1 srvr: 
+zk2 srvr: 
+zk3 srvr: This ZooKeeper instance is not currently serving requests

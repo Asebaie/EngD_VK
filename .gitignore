@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+zk*/*
+!zk*/conf/
+zk*/conf/*
+!zk*/conf/zoo.cfg
+!zk*/data/
+zk*/data/*
+!zk*/data/myid

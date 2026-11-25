@@ -1,0 +1,7 @@
+POD               MEMORY_LIMIT   STATUS   REASON      EXIT_CODE
+pairs-oom-n6zdp   128Mi          Failed   OOMKilled   137
+Events:
+  Type     Reason                Age   From            Message
+  ----     ------                ----  ----            -------
+  Normal   SuccessfulCreate      5s    job-controller  Created pod: pairs-oom-n6zdp
+  Warning  BackoffLimitExceeded  0s    job-controller  Job has reached the specified backoff limit

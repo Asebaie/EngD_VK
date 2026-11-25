@@ -1,0 +1,17 @@
+NAME                  READY   STATUS    RESTARTS   AGE
+pairs-quota-0-c8jzd   1/1     Running   0          2s
+pairs-quota-2-mmdmt   1/1     Running   0          2s
+Name:            hw5-quota
+Namespace:       hw5-quota
+Resource         Used   Hard
+--------         ----   ----
+limits.memory    540Mi  600Mi
+requests.cpu     1      2
+requests.memory  540Mi  600Mi
+POD                   MEMORY_REQUEST   STATUS      CREATED
+pairs-quota-0-c8jzd   270Mi            Succeeded   2026-11-25T11:30:56Z
+pairs-quota-1-lgwch   270Mi            Succeeded   2026-11-25T11:31:02Z
+pairs-quota-2-mmdmt   270Mi            Succeeded   2026-11-25T11:30:56Z
+pairs-quota-3-gqv2c   270Mi            Succeeded   2026-11-25T11:31:02Z
+MESSAGE
+Error creating: pods "pairs-quota-1-tv9w5" is forbidden: exceeded quota: hw5-quota, requested: limits.memory=270Mi,requests.memory=270Mi, used: limits.memory=540Mi,requests.memory=540Mi, limited: limits.memory=600Mi,requests.memory=600Mi

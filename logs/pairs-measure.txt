@@ -1,0 +1,15 @@
+пар уникальных 26295, всего 122143 -> s3://hh-lake/results/k8s/pairs-full.csv
+топ-10 пар:
+ 1. JavaScript + TypeScript = 1582
+ 2. JavaScript + React = 1387
+ 3. Git + JavaScript = 1298
+ 4. React + TypeScript = 1228
+ 5. HTML + JavaScript = 1057
+ 6. CSS + JavaScript = 907
+ 7. CSS + HTML = 839
+ 8. HTML5 + JavaScript = 776
+ 9. CSS3 + JavaScript = 751
+10. Git + TypeScript = 746
+топ-10 совпадает с ДЗ 3: да
+все пары совпадают с ДЗ 3: да
+время 8.3 с, пик памяти: процесс 220 МБ, контейнер 215 МБ

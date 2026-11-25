@@ -1,0 +1,38 @@
+NAME              READY   STATUS    RESTARTS   AGE
+pairs-low-lcftc   0/1     Pending   0          0s
+pairs-low-lcftc   0/1     Pending   0          0s
+pairs-low-lcftc   0/1     ContainerCreating   0          0s
+pairs-low-lcftc   0/1     ContainerCreating   0          0s
+pairs-low-lcftc   1/1     Running             0          0s
+pairs-high-rjwdx   0/1     Pending             0          0s
+pairs-high-rjwdx   0/1     Pending             0          0s
+pairs-low-lcftc    1/1     Running             0          0s
+pairs-low-lcftc    1/1     Terminating         0          0s
+pairs-low-lcftc    1/1     Terminating         0          0s
+pairs-low-lcftc    0/1     Error               0          1s
+pairs-high-rjwdx   0/1     Pending             0          1s
+pairs-high-rjwdx   0/1     ContainerCreating   0          1s
+pairs-low-lcftc    0/1     Error               0          1s
+pairs-high-rjwdx   0/1     ContainerCreating   0          1s
+pairs-high-rjwdx   1/1     Running             0          1s
+pairs-low-lcftc    0/1     Error               0          1s
+pairs-low-lcftc    0/1     Error               0          1s
+pairs-high-rjwdx   0/1     Completed           0          7s
+pairs-high-rjwdx   0/1     Completed           0          9s
+pairs-low-dsh55    0/1     Pending             0          0s
+pairs-low-dsh55    0/1     Pending             0          0s
+pairs-high-rjwdx   0/1     Completed           0          10s
+pairs-low-dsh55    0/1     ContainerCreating   0          0s
+pairs-low-dsh55    0/1     ContainerCreating   0          0s
+pairs-low-dsh55    1/1     Running             0          0s
+pairs-low-dsh55    0/1     Completed           0          7s
+pairs-low-dsh55    0/1     Completed           0          8s
+pairs-low-dsh55    0/1     Completed           0          9s
+pairs-low-dsh55    0/1     Completed           0          9s
+POD               MESSAGE
+pairs-low-lcftc   Preempted by pod 9b25a4cd-ca8a-4d5e-b06e-0ee92c586f51 on node hw5-control-plane
+POD                UID
+pairs-high-rjwdx   9b25a4cd-ca8a-4d5e-b06e-0ee92c586f51
+JOB          PRIORITY   CPU_REQUEST   FAILED   SUCCEEDED
+pairs-low    hw5-low    5             1        1
+pairs-high   hw5-high   4             <none>   1

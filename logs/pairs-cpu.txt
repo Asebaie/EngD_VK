@@ -1,0 +1,19 @@
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests     Limits
+  --------           --------     ------
+  cpu                1450m (18%)  0 (0%)
+  memory             802Mi (20%)  1364Mi (34%)
+NAME                READY   STATUS    RESTARTS   AGE
+pairs-cpu-0-b8vnx   1/1     Running   0          1s
+pairs-cpu-1-d7rj7   1/1     Running   0          1s
+pairs-cpu-2-jcbr7   0/1     Pending   0          1s
+pairs-cpu-3-f5mxh   0/1     Pending   0          1s
+POD                 CPU_REQUEST   STATUS      CREATED                START
+pairs-cpu-0-b8vnx   3             Succeeded   2026-11-25T11:29:14Z   2026-11-25T11:29:14Z
+pairs-cpu-1-d7rj7   3             Succeeded   2026-11-25T11:29:14Z   2026-11-25T11:29:15Z
+pairs-cpu-2-jcbr7   3             Succeeded   2026-11-25T11:29:14Z   2026-11-25T11:29:21Z
+pairs-cpu-3-f5mxh   3             Succeeded   2026-11-25T11:29:14Z   2026-11-25T11:29:21Z
+POD                 MESSAGE
+pairs-cpu-2-jcbr7   0/1 nodes are available: 1 Insufficient cpu. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+pairs-cpu-3-f5mxh   0/1 nodes are available: 1 Insufficient cpu. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.

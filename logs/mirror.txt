@@ -1,0 +1,6 @@
+rustfs: 1002MiB	227 objects	hh-lake
+k8s: 1002MiB	227 objects	hh-lake
+505M	/data/rustfs0
+505M	/data/rustfs1
+505M	/data/rustfs2
+505M	/data/rustfs3

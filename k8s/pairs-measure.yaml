@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pairs-measure
+  namespace: hw5
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: pairs
+          image: hw5-pairs:1
+          args: ["full"]
+          env:
+            - name: S3_ENDPOINT
+              value: rustfs:9000
+          envFrom:
+            - secretRef:
+                name: s3
+          resources:
+            requests:
+              cpu: 500m
+              memory: 1Gi
+            limits:
+              cpu: "1"
+              memory: 1Gi

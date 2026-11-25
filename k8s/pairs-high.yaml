@@ -1,0 +1,33 @@
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: hw5-high
+value: 100000
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pairs-high
+  namespace: hw5
+spec:
+  template:
+    spec:
+      priorityClassName: hw5-high
+      restartPolicy: Never
+      containers:
+        - name: pairs
+          image: hw5-pairs:1
+          args: ["full"]
+          env:
+            - name: S3_ENDPOINT
+              value: s3:9000
+          envFrom:
+            - secretRef:
+                name: s3
+          resources:
+            requests:
+              cpu: "4"
+              memory: 270Mi
+            limits:
+              cpu: "4"
+              memory: 270Mi

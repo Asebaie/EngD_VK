@@ -1,0 +1,28 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pairs-merge
+  namespace: hw5
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: pairs
+          image: hw5-pairs:1
+          args: ["merge"]
+          env:
+            - name: S3_ENDPOINT
+              value: s3:9000
+            - name: PARTS
+              value: "4"
+          envFrom:
+            - secretRef:
+                name: s3
+          resources:
+            requests:
+              cpu: 500m
+              memory: 72Mi
+            limits:
+              cpu: "1"
+              memory: 72Mi

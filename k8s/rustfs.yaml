@@ -1,0 +1,88 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: rustfs
+  namespace: hw5
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rustfs
+  namespace: hw5
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: rustfs
+  template:
+    metadata:
+      labels:
+        app: rustfs
+    spec:
+      containers:
+        - name: rustfs
+          image: rustfs/rustfs:1.0.6
+          env:
+            - name: RUSTFS_VOLUMES
+              value: /data/rustfs{0...3}
+            - name: RUSTFS_UNSAFE_BYPASS_DISK_CHECK
+              value: "true"
+            - name: RUSTFS_ADDRESS
+              value: ":9000"
+            - name: RUSTFS_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: s3
+                  key: AWS_ACCESS_KEY_ID
+            - name: RUSTFS_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: s3
+                  key: AWS_SECRET_ACCESS_KEY
+          ports:
+            - containerPort: 9000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 9000
+          volumeMounts:
+            - name: data
+              mountPath: /data/rustfs0
+              subPath: disk0
+            - name: data
+              mountPath: /data/rustfs1
+              subPath: disk1
+            - name: data
+              mountPath: /data/rustfs2
+              subPath: disk2
+            - name: data
+              mountPath: /data/rustfs3
+              subPath: disk3
+          resources:
+            requests:
+              cpu: 500m
+              memory: 512Mi
+            limits:
+              memory: 1Gi
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: rustfs
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: s3
+  namespace: hw5
+spec:
+  selector:
+    app: rustfs
+  ports:
+    - port: 9000

@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pairs-parts
+  namespace: hw5
+spec:
+  completionMode: Indexed
+  completions: 4
+  parallelism: 4
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: pairs
+          image: hw5-pairs:1
+          args: ["part"]
+          env:
+            - name: S3_ENDPOINT
+              value: s3:9000
+            - name: PARTS
+              value: "4"
+          envFrom:
+            - secretRef:
+                name: s3
+          resources:
+            requests:
+              cpu: 500m
+              memory: 270Mi
+            limits:
+              cpu: "1"
+              memory: 270Mi
